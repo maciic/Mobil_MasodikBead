@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/first_Fragment_home">
+
+    <fragment
+        android:id="@+id/first_Fragment_home"
+        android:name="com.example.masodikbead.first_Fragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_first_" />
+    <fragment
+        android:id="@+id/second_Fragment_video"
+        android:name="com.example.masodikbead.second_Fragment"
+        android:label="Video"
+        tools:layout="@layout/fragment_second_" />
+    <fragment
+        android:id="@+id/third_Fragment_text"
+        android:name="com.example.masodikbead.third_Fragment"
+        android:label="Text"
+        tools:layout="@layout/fragment_third_" />
+</navigation>

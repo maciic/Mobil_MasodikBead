@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/second_Fragment_video"
+        android:icon="@drawable/ic_video"
+        android:title="Video" />
+    <item
+        android:id="@+id/first_Fragment_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/third_Fragment_text"
+        android:icon="@drawable/ic_text"
+        android:title="Text" />
+</menu>
