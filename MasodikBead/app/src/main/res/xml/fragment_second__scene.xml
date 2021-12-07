@@ -17,7 +17,7 @@
                motion:framePosition="90"
                android:alpha="0" />
            <KeyAttribute
-               motion:motionTarget="@+id/title_textView"
+               motion:motionTarget="@+id/video_title_textView"
                motion:framePosition="95"
                android:alpha="0" />
        </KeyFrameSet>
@@ -76,7 +76,7 @@
             android:alpha="1"
             motion:layout_constraintTop_toTopOf="@+id/close_imageView" />
         <Constraint
-            android:id="@+id/title_textView"
+            android:id="@+id/video_title_textView"
             motion:layout_constraintEnd_toStartOf="@+id/play_imageView"
             motion:layout_constraintStart_toEndOf="@+id/main_imageView"
             android:layout_width="0dp"

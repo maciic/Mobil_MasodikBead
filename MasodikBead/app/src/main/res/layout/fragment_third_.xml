@@ -1,19 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layoutDescription="@xml/fragment_third__scene"
     tools:context=".third_Fragment">
 
+    <ImageView
+        android:id="@+id/text_main_imageView"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+        android:id="@+id/text_title_textView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Third"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Dark Souls\nUltimate Game of All Time"
+        android:textColor="#444"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_main_imageView" />
+
+    <ScrollView
+        android:id="@+id/text_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/text_title_textView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_lorem_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare arcu dui vivamus arcu felis bibendum ut tristique. Pulvinar mattis nunc sed blandit. Tellus elementum sagittis vitae et leo duis ut diam quam. Lacus sed viverra tellus in hac habitasse platea dictumst vestibulum. Amet dictum sit amet justo donec enim. Integer feugiat scelerisque varius morbi. Cras pulvinar mattis nunc sed blandit. Enim tortor at auctor urna nunc. Tempus iaculis urna id volutpat lacus laoreet. Pharetra convallis posuere morbi leo urna molestie at elementum. At erat pellentesque adipiscing commodo elit at imperdiet. Ipsum consequat nisl vel pretium lectus quam id leo in. Augue neque gravida in fermentum et sollicitudin ac orci.\n\n Tortor at auctor urna nunc id cursus metus aliquam eleifend. Sed arcu non odio euismod lacinia at. Nisi lacus sed viverra tellus in hac habitasse platea dictumst. Id ornare arcu odio ut sem nulla pharetra. Tempor orci dapibus ultrices in iaculis. Sit amet volutpat consequat mauris nunc congue nisi. Fusce ut placerat orci nulla pellentesque dignissim enim sit. Arcu dui vivamus arcu felis bibendum ut tristique et. Facilisis gravida neque convallis a cras semper auctor neque. Non consectetur a erat nam at. Volutpat ac tincidunt vitae semper. Eget felis eget nunc lobortis mattis. Morbi tempus iaculis urna id volutpat lacus laoreet. Blandit aliquam etiam erat velit scelerisque in dictum non. A arcu cursus vitae congue mauris rhoncus aenean vel elit."
+                android:textSize="20dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

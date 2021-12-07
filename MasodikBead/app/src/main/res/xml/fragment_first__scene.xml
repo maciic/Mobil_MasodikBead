@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+        <KeyFrameSet>
+            <KeyAttribute
+                motion:motionTarget="@+id/house_wifi_text"
+                motion:framePosition="75"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/house_location_text"
+                motion:framePosition="75"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/house_bluetooth_text"
+                motion:framePosition="75"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/house_screen_text"
+                motion:framePosition="75"
+                android:alpha="0" />
+        </KeyFrameSet>
+        <OnSwipe
+            motion:touchAnchorId="@+id/hosue_chip"
+            motion:dragDirection="dragDown"
+            motion:touchAnchorSide="bottom" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/house_icon_box"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_editor_absoluteX="-16dp" />
+        <Constraint
+            android:id="@+id/house_wifi_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_editor_absoluteY="72dp"
+            android:layout_marginTop="68dp" />
+        <Constraint
+            android:id="@+id/house_bluetooth_btn"
+            motion:layout_constraintStart_toEndOf="@+id/house_location_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/house_location_btn"
+            android:layout_marginStart="24dp"
+            motion:layout_constraintTop_toTopOf="@+id/house_location_btn" />
+        <Constraint
+            android:id="@+id/house_location_btn"
+            motion:layout_constraintStart_toEndOf="@+id/house_wifi_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/house_wifi_btn"
+            android:layout_marginStart="24dp"
+            motion:layout_constraintTop_toTopOf="@+id/house_wifi_btn" />
+        <Constraint
+            android:id="@+id/house_screen_btn"
+            motion:layout_constraintStart_toEndOf="@+id/house_bluetooth_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/house_bluetooth_btn"
+            android:layout_marginStart="24dp"
+            motion:layout_constraintTop_toTopOf="@+id/house_bluetooth_btn" />
+        <Constraint
+            android:id="@+id/house_wifi_text"
+            motion:layout_constraintStart_toEndOf="@+id/house_wifi_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/house_wifi_btn"
+            android:alpha="0"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintTop_toTopOf="@+id/house_wifi_btn" />
+        <Constraint
+            android:id="@+id/house_location_text"
+            motion:layout_constraintStart_toEndOf="@+id/house_location_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/house_location_btn"
+            android:alpha="0"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintTop_toTopOf="@+id/house_location_btn" />
+        <Constraint
+            android:id="@+id/house_bluetooth_text"
+            motion:layout_constraintStart_toEndOf="@+id/house_bluetooth_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/house_bluetooth_btn"
+            android:alpha="0"
+            motion:layout_constraintTop_toTopOf="@+id/house_bluetooth_btn" />
+        <Constraint
+            android:id="@+id/house_recycleView"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/house_icon_box"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/house_screen_text"
+            motion:layout_constraintStart_toEndOf="@+id/house_screen_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/house_screen_btn"
+            android:alpha="0"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintTop_toTopOf="@+id/house_screen_btn" />
+        <Constraint
+            motion:layout_editor_absoluteY="172dp"
+            motion:layout_editor_absoluteX="176dp"
+            android:id="@+id/chip6" />
+        <Constraint
+            android:id="@+id/chip6"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="60dp"
+            android:layout_height="24dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/house_icon_box"
+            motion:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/house_recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/house_icon_box"
+            motion:layout_constraintVertical_bias="1.0" />
+        <Constraint
+            android:id="@+id/house_icon_box"
+            android:layout_width="match_parent"
+            android:layout_height="520dp"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/house_wifi_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="52dp"
+            android:layout_marginTop="100dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/house_location_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="32dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/house_wifi_btn" />
+        <Constraint
+            android:id="@+id/house_bluetooth_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="32dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/house_location_btn" />
+        <Constraint
+            android:id="@+id/house_screen_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="32dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/house_bluetooth_btn" />
+        <Constraint
+            android:id="@+id/house_wifi_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:alpha="1"
+            motion:layout_constraintBottom_toBottomOf="@+id/house_wifi_btn"
+            motion:layout_constraintStart_toEndOf="@+id/house_wifi_btn"
+            motion:layout_constraintTop_toTopOf="@+id/house_wifi_btn" />
+        <Constraint
+            android:id="@+id/house_location_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:alpha="1"
+            motion:layout_constraintBottom_toBottomOf="@+id/house_location_btn"
+            motion:layout_constraintStart_toEndOf="@+id/house_location_btn"
+            motion:layout_constraintTop_toTopOf="@+id/house_location_btn" />
+        <Constraint
+            android:id="@+id/house_bluetooth_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:alpha="1"
+            motion:layout_constraintBottom_toBottomOf="@+id/house_bluetooth_btn"
+            motion:layout_constraintStart_toEndOf="@+id/house_bluetooth_btn"
+            motion:layout_constraintTop_toTopOf="@+id/house_bluetooth_btn" />
+        <Constraint
+            android:id="@+id/house_screen_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:alpha="1"
+            motion:layout_constraintBottom_toBottomOf="@+id/house_screen_btn"
+            motion:layout_constraintStart_toEndOf="@+id/house_screen_btn"
+            motion:layout_constraintTop_toTopOf="@+id/house_screen_btn" />
+        <Constraint
+            android:id="@+id/chip6"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="60dp"
+            android:layout_height="24dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/house_icon_box"
+            motion:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+</MotionScene>

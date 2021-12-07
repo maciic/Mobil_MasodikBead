@@ -1,10 +1,21 @@
 package com.example.masodikbead
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
+import android.widget.Toast
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import android.R
+
+import android.widget.TextView
+
+
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -16,10 +27,11 @@ private const val ARG_PARAM2 = "param2"
  * Use the [first_Fragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class first_Fragment : Fragment() {
+class first_Fragment : Fragment()  {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    lateinit var location_btn: FloatingActionButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,13 +41,16 @@ class first_Fragment : Fragment() {
         }
     }
 
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_first_, container, false)
+        return inflater.inflate(com.example.masodikbead.R.layout.fragment_first_, container, false)
     }
+
 
     companion object {
         /**

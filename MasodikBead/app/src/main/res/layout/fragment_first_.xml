@@ -1,20 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layoutDescription="@xml/fragment_first__scene"
     tools:context=".first_Fragment">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/house_icon_box"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#10000000"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-16dp">
 
-    <TextView
-        android:id="@+id/textView"
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/hosue_chip"
+        android:layout_width="60dp"
+        android:clickable="false"
+        android:layout_height="24dp"
+        android:backgroundTint="#30000000"
+        app:layout_constraintBottom_toBottomOf="@+id/house_icon_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/house_wifi_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="First"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="68dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_wifi_off"
+        app:backgroundTint="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@android:color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/house_bluetooth_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_bluetooth_off"
+        app:backgroundTint="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/house_location_btn"
+        app:layout_constraintStart_toEndOf="@+id/house_location_btn"
+        app:layout_constraintTop_toTopOf="@+id/house_location_btn"
+        app:tint="@android:color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/house_location_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_location_off"
+        app:backgroundTint="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/house_wifi_btn"
+        app:layout_constraintStart_toEndOf="@+id/house_wifi_btn"
+        app:layout_constraintTop_toTopOf="@+id/house_wifi_btn"
+        app:tint="@android:color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/house_screen_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_screen_rotation_on"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="@+id/house_bluetooth_btn"
+        app:layout_constraintStart_toEndOf="@+id/house_bluetooth_btn"
+        app:layout_constraintTop_toTopOf="@+id/house_bluetooth_btn"
+        app:tint="@android:color/white" />
+
+    <TextView
+        android:id="@+id/house_wifi_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:alpha="0"
+        android:text="Wifi "
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/house_wifi_btn"
+        app:layout_constraintStart_toEndOf="@+id/house_wifi_btn"
+        app:layout_constraintTop_toTopOf="@+id/house_wifi_btn" />
+
+    <TextView
+        android:id="@+id/house_location_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:alpha="0"
+        android:text="Location"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/house_location_btn"
+        app:layout_constraintStart_toEndOf="@+id/house_location_btn"
+        app:layout_constraintTop_toTopOf="@+id/house_location_btn" />
+
+    <TextView
+        android:id="@+id/house_bluetooth_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:text="Bluetooth"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/house_bluetooth_btn"
+        app:layout_constraintStart_toEndOf="@+id/house_bluetooth_btn"
+        app:layout_constraintTop_toTopOf="@+id/house_bluetooth_btn" />
+
+    <TextView
+        android:id="@+id/house_screen_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:alpha="0"
+        android:text="Screen Rotation"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/house_screen_btn"
+        app:layout_constraintStart_toEndOf="@+id/house_screen_btn"
+        app:layout_constraintTop_toTopOf="@+id/house_screen_btn" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/house_recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/house_icon_box">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

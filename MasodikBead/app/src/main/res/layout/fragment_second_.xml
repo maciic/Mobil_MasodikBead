@@ -62,7 +62,7 @@
         app:layout_constraintTop_toTopOf="@+id/close_imageView" />
 
     <TextView
-        android:id="@+id/title_textView"
+        android:id="@+id/video_title_textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -70,7 +70,7 @@
         android:alpha="0"
         android:ellipsize="end"
         android:lines="1"
-        android:text="Forza Horizon 5 : best game ever"
+        android:text="Forza Horizon 5 : 1440p maximum settings, RTX 3090"
         app:layout_constraintBottom_toBottomOf="@+id/play_imageView"
         app:layout_constraintEnd_toStartOf="@+id/play_imageView"
         app:layout_constraintStart_toEndOf="@+id/main_imageView"
